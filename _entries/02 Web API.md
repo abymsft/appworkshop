@@ -9,7 +9,7 @@ is-parent: yes
 
 #### Create .Net Core Web API
 
-First we need a end point to fetch data. The dotnet cli conveniently has template which create a Web API for a Weather forecast service. Let's try that.
+First we need an end point to fetch data. The dotnet cli conveniently has template which create a Web API for a Weather forecast service. Let's try that.
 * First open a shell of preference. Cmd, PowerShell (Core), Bash, ...
 * Then check that you have at least version [.Net Core 3.1.100](https://dotnet.microsoft.com/download) installed: `dotnet --version`.
 * Next create a folder to host the project. Since we will be adding this to git, an good folder structure is of good use. An example (..\github\[account name]\[repo name]\src\weatherforecast)
@@ -77,4 +77,25 @@ Choose your method of preference for testing out the API. This could be curl, Po
 
 #### Add Web API to source control
 
-https://github.com/new
+Start by creating a new repo in GitHub: https://github.com/new (do not initialize with any files).
+
+![New Git Repo](../media/github/newrepo.png)
+
+Navigate to the root of the repo folder and add a reference to your GitHub repo and then stage (add) the files.
+
+```sh
+..\[repo name]> git remote add origin https://github.com/[account name]/[repo name]
+..\[repo name]> git add .
+..\[repo name]> git status
+```
+
+Check that all files are staged and then commit:
+
+![Git Status](../media/github/gitstatus.png)
+
+The commit and push the files (-u to initially set upstream repo and branch).
+
+```sh
+..\[repo name]> git commit -m 'Initial commit'
+..\[repo name]> git push -u origin master
+```
