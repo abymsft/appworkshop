@@ -7,9 +7,7 @@ defaults:
   -
     values:
       layout: "index"
-markdown: kramdown
-kramdown:
-  input: GFM
+markdown: CommonMarkGhPages
 relative_permalinks: false
 collections:
 - entries

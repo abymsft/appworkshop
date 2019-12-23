@@ -68,7 +68,7 @@ Set the **Storage account** and **File share** names to your resource group name
 You should now have access to the Azure Cloud Shell
 
 ![Set the storage account and fileshare names](media/cloudshell/3-cloudshell.png)
-
+ 
 </details>
 
 #### Uploading and editing files in Azure Cloud Shell
