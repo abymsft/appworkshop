@@ -34,7 +34,7 @@ az login
 
 If you have lab environment credentials similar to the below or you already have a Service Principal you will use with this workshop,
 
-![Lab environment credentials](../media/lab-env.png)
+![Lab environment credentials](media/lab-env.png)
 
 Please then perform an `az login` on your machine using the command below, passing in the `Application Id`, the `Application Secret Key` and the `Tenant Id`.
 
@@ -55,20 +55,20 @@ Head over to <https://shell.azure.com> and sign in with your Azure Subscription 
 
 Select **Bash** as your shell.
 
-![Select Bash](../media/cloudshell/0-bash.png)
+![Select Bash](media/cloudshell/0-bash.png)
 
 Select **Show advanced settings**
 
-![Select show advanced settings](../media/cloudshell/1-mountstorage-advanced.png)
+![Select show advanced settings](media/cloudshell/1-mountstorage-advanced.png)
 
 Set the **Storage account** and **File share** names to your resource group name (all lowercase, without any special characters), then hit **Create storage**
 
-![Azure Cloud Shell](../media/cloudshell/2-storageaccount-fileshare.png)
+![Azure Cloud Shell](media/cloudshell/2-storageaccount-fileshare.png)
 
 You should now have access to the Azure Cloud Shell
 
-![Set the storage account and fileshare names](../media/cloudshell/3-cloudshell.png)
- 
+![Set the storage account and fileshare names](media/cloudshell/3-cloudshell.png)
+
 </details>
 
 #### Uploading and editing files in Azure Cloud Shell

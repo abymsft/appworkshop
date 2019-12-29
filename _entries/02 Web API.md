@@ -79,7 +79,7 @@ Choose your method of preference for testing out the API. This could be curl, Po
 
 Start by creating a new repo in GitHub: https://github.com/new (do not initialize with any files).
 
-![New Git Repo](../media/github/newrepo.png)
+![New Git Repo](media/github/newrepo.png)
 
 Navigate to the root of the repo folder and add a reference to your GitHub repo and then stage (add) the files.
 
@@ -91,7 +91,7 @@ Navigate to the root of the repo folder and add a reference to your GitHub repo 
 
 Check that all files are staged and then commit:
 
-![Git Status](../media/github/gitstatus.png)
+![Git Status](media/github/gitstatus.png)
 
 The commit and push the files (-u to initially set upstream repo and branch).
 
@@ -99,3 +99,20 @@ The commit and push the files (-u to initially set upstream repo and branch).
 ..\[repo name]> git commit -m 'Initial commit'
 ..\[repo name]> git push -u origin master
 ```
+
+#### Create App Service Web App
+
+Now we want to host our Web API in Azure. We will use an App Service Web App for this. Web Apps run on App Service Plans. Plans can be of type Windows or Linux and come in various sizes and feature sets. For this workshop, the Linux Standard SKU will be used, but feel free to play with other options. Throughout the scripts, some standard values are used for names and regions, but you can modify that if you like.
+
+```sh
+..\[repo name]> az group create --name appworkshop-group --location westeurope
+..\[repo name]> az appservice plan create --name appworkshop-plan --resource-group appworkshop-group --sku S1 --is-linux
+```
+
+For the Web App we need a global unique name - put on your creative hat.
+
+```sh
+..\[repo name]> az webapp create -g appworkshop-group --name mycreativeuniquename --plan appworkshop-plan --runtime "DOTNETCORE|3.0" --deployment-source-url https://github.com/madsd/apptest --deployment-source-branch master
+..\[repo name]> az appservice plan create --name appworkshop-plan --resource-group appworkshop-group --sku S1 --is-linux
+```
+
