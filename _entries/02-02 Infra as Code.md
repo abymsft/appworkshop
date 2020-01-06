@@ -1,7 +1,7 @@
 ---
-sectionid: githubactions
+sectionid: infraascode
 sectionclass: h2
-title: GitHub Actions
+title: Infrastructure as Code
 parent-id: devops
 ---
 

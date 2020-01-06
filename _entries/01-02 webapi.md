@@ -1,6 +1,6 @@
 ---
 sectionid: webapi
-sectionclass: h1
+sectionclass: h2
 title: Creating a Web API
 parent-id: intro
 ---
