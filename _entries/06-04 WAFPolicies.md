@@ -1,7 +1,7 @@
 ---
-sectionid: restrictbackend
+sectionid: wafpolicies
 sectionclass: h2
-title: Restrict backend access
+title: Use Web Application Firewall policies
 parent-id: security
 ---
 

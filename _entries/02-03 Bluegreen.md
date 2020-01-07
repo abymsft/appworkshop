@@ -1,9 +1,8 @@
 ---
-sectionid: githubactions
+sectionid: bluegreen
 sectionclass: h2
-title: GitHub Actions
+title: Blue/Green deployments
 parent-id: devops
 ---
 
 This is a challenge section
-
