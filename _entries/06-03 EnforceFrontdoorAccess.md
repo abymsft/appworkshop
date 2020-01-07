@@ -1,7 +1,7 @@
 ---
-sectionid: restrictbackend
+sectionid: enforcefrontdoor
 sectionclass: h2
-title: Restrict Azure Front Door access
+title: Enforce Azure Front Door access
 parent-id: security
 ---
 

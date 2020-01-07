@@ -1,7 +1,7 @@
 ---
 sectionid: enhanceb2c
 sectionclass: h2
-title: Improve the Azure AD B2C sign-in experience
+title: Improve the sign-in experience
 parent-id: identity
 ---
 
