@@ -5,5 +5,5 @@ title: GitHub Actions
 parent-id: devops
 ---
 
-This is a challenge section
+This is a challenge section for enabling GitHub Actions
 

@@ -1,9 +1,9 @@
 ---
-sectionid: githubactions
+sectionid: frontend
 sectionclass: h2
-title: GitHub Actions
-parent-id: devops
+title: Create Weather App frontend
+parent-id: intro
 ---
 
-This is a challenge section
+This is a challenge section for frontend
 
