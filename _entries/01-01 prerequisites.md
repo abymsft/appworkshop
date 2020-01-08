@@ -14,12 +14,20 @@ You can use the Azure Cloud Shell accessible at <https://shell.azure.com> once y
 ### Azure subscription
 You will need an Azure subscription to complete the challenges. It should work on all subscription types and with Contributor permissions for just a Resource Group. If you experience otherwise, please let us know in the issues section in the GitHub repo for the workshop, so we can improve.
 
-#### If you have an Azure subscription
+#### Working locally
 
 <details>
 <summary>Expand details</summary>
 
-Please use your username and password to login to <https://portal.azure.com>.
+Pick your favorite Shell. On Windows it can be WSL, Git Bash, PowerShell (Core) or good'ol cmd.
+
+Ensure the tools are installed. Azure CLI (at least 2.0.76) and .Net Core SDK (at least 3.1.100). Verify the versions with `az --version` and `dotnet --list-sdks`. Git should also be of recent update 2.20+.
+
+* Install Azure CLI: <https://docs.microsoft.com/en-us/cli/azure/install-azure-cli>
+* Install .Net Core SDK: <https://dotnet.microsoft.com/download>
+* Install Git client: <https://git-scm.com/download>
+
+If you want to use Visual Studio Code, you can find it here <https://code.visualstudio.com/download> - but any text editor will work
 
 Also please authenticate your Azure CLI by running the command below on your machine and following the instructions. Ensure you are in the right subscription.
 
@@ -27,29 +35,11 @@ Also please authenticate your Azure CLI by running the command below on your mac
 az login
 az account show
 ```
-
-</details>
-
-#### If you have been given an access to a subscription as part of a lab, or you already have a Service Principal you want to use
-
-<details>
-<summary>Expand details</summary>
-
-If you have lab environment credentials similar to the below or you already have a Service Principal you will use with this workshop,
-
-![Lab environment credentials](media/lab-env.png)
-
-Please then perform an `az login` on your machine using the command below, passing in the `Application Id`, the `Application Secret Key` and the `Tenant Id`.
-
-```sh
-az login --service-principal --username APP_ID --password "APP_SECRET" --tenant TENANT_ID
-```
-
 </details>
 
 #### Azure Cloud Shell
 
-You can use the Azure Cloud Shell accessible at <https://shell.azure.com> once you login with an Azure subscription.
+You can use the Azure Cloud Shell accessible at <https://shell.azure.com> once you login with an Azure subscription. If you need to configure Azure Cloud Shell first, you find the details below.
 
 <details>
 <summary>Expand details</summary>

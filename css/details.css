@@ -4,3 +4,8 @@ details {
 	border: 1px solid hsla(162, 76%, 32%, .3);
 	border-radius: 5px;
   }
+
+  summary {
+	cursor: pointer;
+	outline: none;
+  }
