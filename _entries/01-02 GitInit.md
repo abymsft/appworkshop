@@ -5,12 +5,14 @@ title: Git Init and Ignore
 parent-id: intro
 ---
 
-### Challenge
-* Create a GitHub repo in your GitHub account.
-* Create an local folder and init a Git repo (or clone your GitHub repo, if you initialized it).
+### Challenges
+* Create a Public GitHub repo in your GitHub account
+* Create an local folder and init a Git repo (or clone your GitHub repo, if you initialized it)
 * Create a .gitignore file for .Net Core
-* Commit the file and push to your GitHub repo.
-* Create a Resource Group for your 
+* Commit the file and push to your GitHub repo
+* Create a Resource Group for your
+
+#### Challenge verification
 
 #### Tips
 
@@ -54,12 +56,20 @@ Then commit and push the files (-u to initially set upstream repo and branch).
 ..\[repo name]> git commit -m 'Initial commit'
 ..\[repo name]> git push -u origin master
 ```
+Your GitHub repo should now contain the .gitignore file.
+
+![Git Ignore file](media/github/gitrepoignorefile.png)
 </details>
 <details>
 <summary>Create Resource Group</summary>
-Run the following az command:
+Run the following az command (choose name and location based on preference):
 
 ```sh
-..\[repo name]> az group create --name appworkshop-group --location westeurope
+az group create --name <Resource-Group-Name> --location westeurope
+```
+
+To see a list of available locations you can run this command (some might require whitelisting):
+```sh
+az account list-locations --query '[].name'
 ```
 </details>

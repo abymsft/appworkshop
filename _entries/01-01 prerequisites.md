@@ -9,6 +9,10 @@ parent-id: intro
 
 As the core tools, you will need Azure CLI, dotnet CLI and a Git client. Further, we will use Visual Studio Code to edit files. These are all compatible with both Windows, Linux and Mac.
 
+For central source control and ci/cd, the workshop will be using GitHub, so you also need to have a GitHub account. If you prefer another set of tools and repos - like Azure DevOps Repos and Pipelines, the workshop can be completed with that, but you will not have step-by-step solutions, and in the challenges you should just replace GitHub with your tool-of-choice.
+
+All the challenges will also be using .Net Core, but except for the code specific challenges, you can replace it with a web application in your language-of-choice.
+
 You can use the Azure Cloud Shell accessible at <https://shell.azure.com> once you login with an Azure subscription. The Azure Cloud Shell has the Azure CLI pre-installed and configured to connect to your Azure subscription as well as `dotnet` and `git`.
 
 ### Azure subscription
