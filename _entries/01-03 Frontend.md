@@ -42,7 +42,7 @@ Run the new web app and open the page in your browser on http://localhost:5000/
 <details>
 <summary>Commit and push files to GitHub</summary>
 
-Stage and commit your files. Push them to your GitHub repo. As an extra challenge you can look at the help for git (--help) and see if you can combine some of the actions. Or perhaps only push part of the files. Be sure to also check `git status` to see that everything looks right.
+Stage and commit your files. Push them to your GitHub repo.
 
 ```sh
 ..\[repo name]\src\client> git add .

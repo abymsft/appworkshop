@@ -47,7 +47,7 @@ You can also test this from command line - depending on your shell, either wget,
 ..\[repo name]\src\server> Invoke-WebRequest http://localhost:5000/weatherforecast
 ```
 
-You should see an output similar to this:
+You should see an output similar to this (probably more compressed depending on your tool):
 
 ```json
 [

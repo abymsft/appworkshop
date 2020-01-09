@@ -5,5 +5,23 @@ title: GitHub Actions
 parent-id: devops
 ---
 
-This is a challenge section for enabling GitHub Actions
+### Challenges
+* Challenge 1
 
+
+#### Challenge verification
+
+#### Tips
+
+#### Step-by-step solution
+
+<details>
+<summary>Step x</summary>
+
+Run the following commands:
+
+```sh
+command to --run
+```
+
+</details>
