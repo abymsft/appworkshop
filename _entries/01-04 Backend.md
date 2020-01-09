@@ -1,42 +1,53 @@
 ---
 sectionid: webapi
 sectionclass: h2
-title: Creating a backend Web API
+title: Create Weather Web API backend
 parent-id: intro
 ---
 
-### Tasks
+### Challenges
+* Create a folder in your local git repo for the frontend - e.g. src/client
+* Standing in that directory scaffold a new 'blazorserver' project using `dotnet new`
+* Verify that the project runs on localhost
+* Commit the files and push to your GitHub repo
 
-#### Create .Net Core Web API
 
-First we need an end point to fetch data. The dotnet cli conveniently has template which create a Web API for a Weather forecast service. Let's try that.
-* First open a shell of preference. Cmd, PowerShell (Core), Bash, ...
-* Then check that you have at least version [.Net Core 3.1.100](https://dotnet.microsoft.com/download) installed: `dotnet --version`.
-* Next create a folder to host the project. Since we will be adding this to git, an good folder structure is of good use. An example (..\github\[account name]\[repo name]\src\weatherforecast)
+#### Challenge verification
 
-```sh
-..\[repo name]> git init
-..\[repo name]> dotnet new gitignore
-```
+#### Tips
 
-```sh
-..\[repo name]> mkdir src\weatherforecast
-..\[repo name]> cd .\src\weatherforecast\
-..\[repo name]\src\weatherforecast> dotnet new webapi
-```
-
-#### Test Web API
-
-Test out the new Web API with the run command. You Web API should now be listening on localhost port 5000/5001.
-
-```sh
-..\[repo name]\src\weatherforecast> dotnet run
-```
-
-Choose your method of preference for testing out the API. This could be curl, Postman or simply the browser. The Web API will not be listening for incoming messages in the root folder, so you need to access it on https://localhost:5001/weatherforecast. You should see an output similar to this:
+#### Step-by-step solution
 
 <details>
-<summary>Web API output</summary>
+<summary>Create Web API</summary>
+
+Run the following commands:
+
+```sh
+..\[repo name]\src\client> cd ..
+..\[repo name]\src> mkdir server
+..\[repo name]\src> cd .\server\
+..\[repo name]\src\server> dotnet new webapi
+..\[repo name]\src\server> dotnet run
+```
+
+</details>
+
+<details>
+<summary>Test the Web API</summary>
+Access the new web api from your browser on http://localhost:5000/weatherforecast
+
+You can also test this from command line - depending on your shell, either wget, curl or Invoke-WebRequest. For example:
+
+```sh
+..\[repo name]\src\server> curl https://localhost:5001/weatherforecast
+```
+
+```powershell
+..\[repo name]\src\server> Invoke-WebRequest http://localhost:5000/weatherforecast
+```
+
+You should see an output similar to this:
 
 ```json
 [
@@ -72,47 +83,36 @@ Choose your method of preference for testing out the API. This could be curl, Po
     }
 ]
 ```
+</details>
+
+<details>
+<summary>Certificate errors?</summary>
+If you get a certificate error, you can either trust the dev cert, if you have permissions to do so.
+
+```sh
+..\[repo name]\src\server> dotnet dev-certs https --trust
+```
+
+Or you can run the commands in "ignore" mode:
+
+```sh
+..\[repo name]\src\server> curl --ignore https://localhost:5001/weatherforecast
+```
+
+```powershell
+..\[repo name]\src\server> Invoke-WebRequest -SkipCertificateCheck http://localhost:5000/weatherforecast
+```
 
 </details>
 
-#### Add Web API to source control
+<details>
+<summary>Commit and push files to GitHub</summary>
 
-Start by creating a new repo in GitHub: https://github.com/new (do not initialize with any files).
-
-![New Git Repo](media/github/newrepo.png)
-
-Navigate to the root of the repo folder and add a reference to your GitHub repo and then stage (add) the files.
+Stage and commit your files. Push them to your GitHub repo.
 
 ```sh
-..\[repo name]> git remote add origin https://github.com/[account name]/[repo name]
-..\[repo name]> git add .
-..\[repo name]> git status
+..\[repo name]\src\server> git add .
+..\[repo name]\src\server> git commit -m 'Weather Web API'
+..\[repo name]\src\server> git push
 ```
-
-Check that all files are staged and then commit:
-
-![Git Status](media/github/gitstatus.png)
-
-The commit and push the files (-u to initially set upstream repo and branch).
-
-```sh
-..\[repo name]> git commit -m 'Initial commit'
-..\[repo name]> git push -u origin master
-```
-
-#### Create App Service Web App
-
-Now we want to host our Web API in Azure. We will use an App Service Web App for this. Web Apps run on App Service Plans. Plans can be of type Windows or Linux and come in various sizes and feature sets. For this workshop, the Linux Standard SKU will be used, but feel free to play with other options. Throughout the scripts, some standard values are used for names and regions, but you can modify that if you like.
-
-```sh
-..\[repo name]> az group create --name appworkshop-group --location westeurope
-..\[repo name]> az appservice plan create --name appworkshop-plan --resource-group appworkshop-group --sku S1 --is-linux
-```
-
-For the Web App we need a global unique name - put on your creative hat.
-
-```sh
-..\[repo name]> az webapp create -g appworkshop-group --name mycreativeuniquename --plan appworkshop-plan --runtime "DOTNETCORE|3.0" --deployment-source-url https://github.com/madsd/apptest --deployment-source-branch master
-..\[repo name]> az appservice plan create --name appworkshop-plan --resource-group appworkshop-group --sku S1 --is-linux
-```
-
+</details>
