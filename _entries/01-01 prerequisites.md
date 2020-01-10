@@ -16,6 +16,7 @@ All the challenges will also be using .Net Core, but except for the code specifi
 You can use the Azure Cloud Shell accessible at <https://shell.azure.com> once you login with an Azure subscription. The Azure Cloud Shell has the Azure CLI pre-installed and configured to connect to your Azure subscription as well as `dotnet` and `git`.
 
 ### Azure subscription
+
 You will need an Azure subscription to complete the challenges. It should work on all subscription types and with Contributor permissions for just a Resource Group. If you experience otherwise, please let us know in the issues section in the GitHub repo for the workshop, so we can improve.
 
 #### Working locally

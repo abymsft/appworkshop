@@ -13,8 +13,19 @@ parent-id: intro
 * Create a Resource Group for your
 
 #### Challenge verification
+Your GitHub Repo looks like this
+
+![Git Ignore file](media/github/gitrepoignorefile.png)
+
+This command should contain the resource group you will be working in.
+```sh
+az group list --output table
+```
 
 #### Tips
+
+* https://github.com/new
+* https://docs.microsoft.com/cli/azure/group#az-group-create
 
 #### Step-by-step solution
 
