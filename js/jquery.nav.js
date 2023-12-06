@@ -39,12 +39,7 @@
 			currentClass: 'current',
 			changeHash: false,
 			easing: 'swing',
-			filter: '',
-			scrollSpeed: 750,
-			scrollThreshold: 0.5,
-			begin: false,
-			end: false,
-			scrollChange: false
+			filter: ''
 		},
 
 		init: function() {
